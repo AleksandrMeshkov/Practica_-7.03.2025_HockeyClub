@@ -1,0 +1,10 @@
+CREATE OR REPLACE PROCEDURE delete_arena(
+    IN p_arena_id INTEGER
+)
+LANGUAGE plpgsql
+AS $$
+BEGIN
+    DELETE FROM arena
+    WHERE arena_id = p_arena_id;
+END;
+$$;

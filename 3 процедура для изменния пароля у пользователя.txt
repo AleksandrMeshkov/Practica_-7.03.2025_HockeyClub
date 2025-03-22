@@ -1,0 +1,12 @@
+CREATE OR REPLACE PROCEDURE update_user_password(
+    IN p_user_id INTEGER,
+    IN p_password CHARACTER VARYING
+)
+LANGUAGE plpgsql
+AS $$
+BEGIN
+    UPDATE users
+    SET password = p_password
+    WHERE user_id = p_user_id;
+END;
+$$;

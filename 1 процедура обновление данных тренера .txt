@@ -1,0 +1,21 @@
+CREATE OR REPLACE PROCEDURE coach_update(
+    IN p_coach_id INTEGER,
+    IN p_name CHARACTER VARYING,
+    IN p_surname CHARACTER VARYING,
+    IN p_patronymic CHARACTER VARYING,
+    IN p_date_birthday DATE,
+    IN p_experience_years INTEGER
+)
+LANGUAGE plpgsql
+AS $$
+BEGIN
+    UPDATE coaches
+    SET 
+        name = p_name,
+        surname = p_surname,
+        patronymic = p_patronymic,
+        date_birthday = p_date_birthday,
+        experience_years = p_experience_years
+    WHERE coach_id = p_coach_id;
+END;
+$$;
