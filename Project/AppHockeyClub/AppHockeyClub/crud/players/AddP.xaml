@@ -1,0 +1,98 @@
+﻿<Window x:Class="AppHockeyClub.crud.players.AddP"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppHockeyClub.crud.players"
+        mc:Ignorable="d"
+        Title="Добавление игрока" 
+        Height="500" 
+        Width="400"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Добавление нового игрока" 
+                   Grid.Row="0"
+                   FontSize="18"
+                   FontWeight="Bold"
+                   Margin="0,0,0,20"
+                   HorizontalAlignment="Center"/>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Фамилия:" 
+                       Width="120"
+                       VerticalAlignment="Center"/>
+            <TextBox x:Name="txtSurname" 
+                     Width="200"
+                     MaxLength="50"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Имя:" 
+                       Width="120"
+                       VerticalAlignment="Center"/>
+            <TextBox x:Name="txtName" 
+                     Width="200"
+                     MaxLength="50"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Отчество:" 
+                       Width="120"
+                       VerticalAlignment="Center"/>
+            <TextBox x:Name="txtPatronymic" 
+                     Width="200"
+                     MaxLength="50"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Дата рождения:" 
+                       Width="120"
+                       VerticalAlignment="Center"/>
+            <TextBox x:Name="txtBirthDate" 
+                     Width="200"
+                     ToolTip="Формат: ГГГГ-ММ-ДД (например: 2025-12-12)"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="5" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Рост (см):" 
+                       Width="120"
+                       VerticalAlignment="Center"/>
+            <TextBox x:Name="txtHeight" 
+                     Width="200"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="6" Orientation="Horizontal" Margin="0,0,0,15">
+            <TextBlock Text="Вес (кг):" 
+                       Width="120"
+                       VerticalAlignment="Center"/>
+            <TextBox x:Name="txtWeight" 
+                     Width="200"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="8" 
+                    Orientation="Horizontal" 
+                    HorizontalAlignment="Right">
+            <Button Content="Сохранить" 
+                    Width="100" 
+                    Margin="0,0,10,0" 
+                    Click="SaveButton_Click"/>
+            <Button Content="Отмена" 
+                    Width="100" 
+                    Click="CancelButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

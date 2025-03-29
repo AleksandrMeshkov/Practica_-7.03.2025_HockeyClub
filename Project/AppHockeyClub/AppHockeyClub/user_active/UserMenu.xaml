@@ -1,0 +1,104 @@
+﻿<Window x:Class="AppHockeyClub.user_active.UserMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppHockeyClub.user_active"
+        mc:Ignorable="d"
+         Title="Меню" Height="450" Width="800"
+         WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+
+        <Style x:Key="MenuButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="#FF3E3E40"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="4"
+                            Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF3E3E40"/>
+                    <Setter Property="BorderBrush" Value="#FF007ACC"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#FF007ACC"/>
+                    <Setter Property="BorderBrush" Value="#FF007ACC"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="166.8"/>
+            <ColumnDefinition Width="33.2"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="103*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Border Grid.Column="0" Background="#FF2D2D30" Grid.ColumnSpan="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+
+                <TextBlock Text="Хоккейный клуб" 
+                       Grid.Row="0"
+                       Foreground="White" 
+                       FontSize="18" 
+                       FontWeight="Bold" 
+                       Margin="10,20,10,30"
+                       HorizontalAlignment="Center"/>
+
+
+                <UniformGrid Grid.Row="1" Rows="6" VerticalAlignment="Stretch">
+
+                    <Button Content="Команды" 
+                        Style="{StaticResource MenuButtonStyle}"
+                        Margin="5" Click="TeamButton_Click"/>
+                    <Button Content="Игроки" 
+                        Style="{StaticResource MenuButtonStyle}"
+                        Margin="5" Click="PlayersButton_Click"/>
+                    <Button Content="Тренеры" 
+                        Style="{StaticResource MenuButtonStyle}"
+                        Margin="5" Click="CoachButton_Click"/>
+                    <Button Content="Игры" 
+                        Style="{StaticResource MenuButtonStyle}"
+                        Margin="5" Click="PlayButton_Click"/>
+                    <Button Content="Статистика" 
+                        Style="{StaticResource MenuButtonStyle}"
+                        Margin="5" Click="StatButton_Click"/>
+                </UniformGrid>
+            </Grid>
+        </Border>
+
+        <Border Grid.Column="2" Background="#FF252526" Grid.ColumnSpan="2">
+
+            <Image Source="/img/image.png" 
+        HorizontalAlignment="Stretch"
+       VerticalAlignment="Stretch"
+       Stretch="UniformToFill"/>
+        </Border>
+    </Grid>
+</Window>

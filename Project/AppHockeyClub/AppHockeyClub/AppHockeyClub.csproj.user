@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="crud\coaches\AddC.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="crud\coaches\EditC.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="crud\players\AddP.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="crud\players\EditP.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="crud\teams\AddT.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="crud\teams\EditT.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="listpage\CoachesWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="listpage\PlayersWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="listpage\PlayWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="listpage\StatiscticsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="listpage\TeamsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MenuWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RegWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="user_active\CouchUser.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="user_active\PlayersUsers.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="user_active\PlayUsers.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="user_active\StaticticsUsers.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="user_active\TeamUsers.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="user_active\UserMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
